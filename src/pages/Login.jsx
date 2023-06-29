@@ -3,6 +3,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { loginUser, logout, setUserInfo } from '../store/slices/userInfo.slice'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -25,7 +26,7 @@ const Login = () => {
   return (
     <section className="bg-gray-100 grid place-content-center py-10 ssm:py-16 ">
       {token ? (
-        <div className='py-36'>
+        <div className="py-36">
           <section className="bg-white rounded-xl p-4 w-[280px] xs:w-[310px] ssm:w-[370px] md:w-[410px]  grid gap-6">
             <i className="bx bxs-user-circle text-gray-400/50 text-center text-8xl md:text-9xl"></i>
             <span className="text-center">
@@ -45,7 +46,7 @@ const Login = () => {
           className="bg-white rounded-xl p-6 max-w-[280px] xs:max-w-[320px] ssm:max-w-[360px] md:max-w-[450px]  grid gap-6"
         >
           <h3 className="font-semibold text-2xl p-2 leading-9">
-            Welcome! Enter your email and password to continue{" "}
+            Welcome! Enter your email and password to continue
           </h3>
 
           <section className="bg-[#D8F5FD] p-4 rounded-md py-2">
@@ -89,7 +90,12 @@ const Login = () => {
             Login
           </button>
 
-          <span className="text-sm">Don't have an account? Sign up</span>
+          <span className="text-sm">
+            Don't have an account?{" "}
+            <Link className="text-blue-500" to="/signup">
+              Sign up
+            </Link>
+          </span>
         </form>
       )}
     </section>
