@@ -85,7 +85,7 @@ const ProductDetail = () => {
       <section className="grid gap-6 sm:grid-cols-2 p-4 md:p-9">
         {/*slider */}
         <article className="overflow-hidden relative">
-          <section className={`flex w-[300%] px-5 ${sliderStyles[imageToShow]} transition-all duration-200`}>
+          <section className={`flex w-[300%] ${sliderStyles[imageToShow]} transition-all duration-200`}>
             <div className="h-[300px] w-[calc(100%_/_3)]">
               <img
                 className="w-full h-full object-contain"
