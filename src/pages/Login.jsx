@@ -91,7 +91,7 @@ const Login = () => {
           </button>
 
           <span className="text-sm">
-            Don't have an account?{" "}
+            Don't have an account?
             <Link className="text-blue-500" to="/signup">
               Sign up
             </Link>
