@@ -77,12 +77,12 @@ const Home = () => {
               <section className="flex flex-col gap-6">
                 <h3 className="text-2xl font-bold lg:hidden">Filters</h3>
                 <div className="flex justify-between border-b-2 border-gray-400">
-                  <h4 className=" md:text-xl font-semibold">
-                    Category
-                  </h4>
-                  <button onClick={handleIsOpenCategory}>
+                  <h4 className=" md:text-xl font-semibold">Category</h4>
+                  <button
+                    onClick={handleIsOpenCategory}
+                  >
                     {isOpen ? (
-                      <i className="bx bx-caret-up"></i>
+                      <i className="bx bx-caret-up "></i>
                     ) : (
                       <i className="bx bx-caret-down"></i>
                     )}
@@ -93,7 +93,11 @@ const Home = () => {
                     isOpen ? "max-h-[5000px]" : "max-h-[0px]"
                   } lg:absolute my-4 px-4 lg:mt-8 overflow-hidden transition-all duration-500 ease-in `}
                 >
-                  <li className="text-lg" onClick={handleClickCategory} data-category={""}>
+                  <li
+                    className="text-lg"
+                    onClick={handleClickCategory}
+                    data-category={""}
+                  >
                     All
                   </li>
                   {categories.map((category) => (
